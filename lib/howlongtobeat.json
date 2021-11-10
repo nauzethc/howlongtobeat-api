@@ -1,0 +1,5 @@
+{
+  "BASE_URL": "https://howlongtobeat.com",
+  "SEARCH_ENDPOINT": "/search_results.php",
+  "DETAIL_ENDPOINT": "/game.php"
+}

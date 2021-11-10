@@ -1,0 +1,28 @@
+{
+  "name": "howlongtobeat-api",
+  "version": "1.0.0",
+  "description": "HowLongToBeat.com scrapper API",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf ./dist && tsc",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "api",
+    "scrapper",
+    "howlongtobeat",
+    "games"
+  ],
+  "author": "Nauzet Hernandez <nauzethc@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "tslint": "^6.1.3",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cheerio": "^1.0.0-rc.10"
+  }
+}
