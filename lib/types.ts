@@ -17,7 +17,7 @@ export type GameResult = {
 export type GameDetail = {
   id: number
   name: string
-  description: string
+  description?: string
   imageUrl?: string
   stats: {
     playing?: string
@@ -30,13 +30,13 @@ export type GameDetail = {
   platforms?: string[]
   genres?: string[]
   developers?: string[]
-  publisher?: string
+  publishers?: string[]
   releaseDates?: {
     NA?: string
     EU?: string
     JP?: string
   }
-  gameplays?: {
+  gameplays: {
     single?: any[]
     multi?: any[]
     dlc?: any[]
