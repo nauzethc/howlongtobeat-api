@@ -95,7 +95,7 @@ function parseTableTimes (table: string, rows: Array<string[]>): any {
   return { [name]: values }
 }
 
-export function parseQuery (query: Query): string {
+export function parseQuery (query: Query = {}): string {
   const params = new URLSearchParams()
   params.append('queryString', query.search || '')
   params.append('t', 'games')
@@ -207,6 +207,9 @@ export function parseGameDetail (html: string): GameDetail {
     .trim()
   const imageUrl: string = $main.find('.game_image img').attr().src
 
+  // Fail on empty data
+  if (!id && !name) throw new Error("Couldn't parse data from given HTML")
+
   // Stats
   const stats: any = {}
   $main.find('.profile_header_game > .profile_details ul li').each(function () {
@@ -238,16 +241,20 @@ export function parseGameDetail (html: string): GameDetail {
 
     switch (key) {
       case 'Platforms:':
+      case 'Platform:':
         metadata.platforms = value.split(', ')
         break
       case 'Genres:':
+      case 'Genre:':
         metadata.genres = value.split(', ')
         break
       case 'Developers:':
+      case 'Developer:':
         metadata.developers = value.split(', ')
         break
       case 'Publishers:':
-        metadata.publisher = value
+      case 'Publisher:':
+        metadata.publisher = value.split(', ')
         break
       case 'NA:':
       case 'EU:':
