@@ -28,3 +28,8 @@ export {
   Genre,
   Platform
 }
+
+export default {
+  find,
+  get
+}
