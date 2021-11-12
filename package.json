@@ -1,6 +1,6 @@
 {
   "name": "howlongtobeat-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "HowLongToBeat.com scrapper API",
   "main": "dist/index.js",
   "scripts": {
@@ -20,12 +20,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nauzethc/howlongtobeat.js"
+    "url": "https://github.com/nauzethc/howlongtobeat-api"
   },
   "bugs": {
-    "url": "https://github.com/nauzethc/howlongtobeat.js/issues"
+    "url": "https://github.com/nauzethc/howlongtobeat-api/issues"
   },
-  "homepage": "https://github.com/nauzethc/howlongtobeat.js",
+  "homepage": "https://github.com/nauzethc/howlongtobeat-api",
   "devDependencies": {
     "@types/chai": "^4.2.22",
     "@types/mocha": "^9.0.0",
