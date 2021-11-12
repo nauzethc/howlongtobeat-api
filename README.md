@@ -1,4 +1,4 @@
-# howlongtobeat.js
+# howlongtobeat-api
 
 Promise based API to get data from HowLongToBeat.com web.
 
