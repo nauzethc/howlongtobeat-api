@@ -118,7 +118,7 @@ howlongtobeat
 ## Typescript
 
 ```typescript
-import { find, GameDetail, Query, Platform, SortBy } from 'howlongtobeat'
+import { find, GameResult, Query, Platform, SortBy } from 'howlongtobeat-api'
 
 // Write your own code with types
 async function findHaloGames (): void {
@@ -128,7 +128,7 @@ async function findHaloGames (): void {
       platform: Platform.Xbox360,
       sortBy: SortBy.ReleaseDate
     }
-    const results: any = await find(query)
+    const results: { total: number; data: GameResult[] } = await find(query)
     console.log(results.data)
   } catch (err) {
     console.log(err)
