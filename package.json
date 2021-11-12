@@ -1,12 +1,13 @@
 {
-  "name": "howlongtobeat.js",
+  "name": "howlongtobeat-api",
   "version": "1.0.0",
   "description": "HowLongToBeat.com scrapper API",
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha -r ts-node/register tests/**/*.test.ts",
-    "build": "rm -rf ./dist && npm test && tsc",
-    "prepare": "npm run build"
+    "build": "rimraf ./dist && tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test"
   },
   "keywords": [
     "api",
@@ -31,8 +32,8 @@
     "@types/node": "^16.11.7",
     "chai": "^4.3.4",
     "mocha": "^9.1.3",
+    "rimraf": "^3.0.2",
     "ts-node": "^10.4.0",
-    "tslint": "^6.1.3",
     "typescript": "^4.4.4"
   },
   "dependencies": {
