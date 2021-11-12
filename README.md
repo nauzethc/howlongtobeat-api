@@ -20,13 +20,13 @@ Inspired by [@ckatzorke](https://github.com/ckatzorke/howlongtobeat) project
 Using npm:
 
 ```bash
-$ npm install howlongtobeat.js
+$ npm install howlongtobeat-api
 ```
 
 Using yarn:
 
 ```bash
-$ yarn install howlongtobeat.js
+$ yarn install howlongtobeat-api
 ```
 
 ## API
@@ -40,7 +40,7 @@ howlongtobeat.get(id: number): Promise<GameDetail>
 ## Example
 
 ```javascript
-import howlongtobeat from 'howlongtobeat.js'
+import howlongtobeat from 'howlongtobeat-api'
 
 // Find games
 howlongtobeat
@@ -118,18 +118,17 @@ howlongtobeat
 ## Typescript
 
 ```typescript
-import howlongtobeat from 'howlongtobeat/lib'
-import { GameDetail, Query, Platform, SortBy } from 'howlongtobeat/lib/types'
+import { find, GameDetail, Query, Platform, SortBy } from 'howlongtobeat'
 
 // Write your own code with types
 async function findHaloGames (): void {
   try {
     const query: Query = {
       search: 'halo',
-      platform: Platform.NintendoSwitch,
+      platform: Platform.Xbox360,
       sortBy: SortBy.ReleaseDate
     }
-    const results: any = await howlongtobeat.find(query)
+    const results: any = await find(query)
     console.log(results.data)
   } catch (err) {
     console.log(err)
