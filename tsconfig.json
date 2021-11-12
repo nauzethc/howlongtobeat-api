@@ -13,8 +13,7 @@
     "resolveJsonModule": true,
   },
   "include": [
-    "lib",
-    "howlongtobeat.json"
+    "lib"
   ],
   "exclude": [
     "node_modules",
