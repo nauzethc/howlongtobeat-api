@@ -14,7 +14,8 @@ export async function find (
     params: { page: query.page || 1 },
     timeout: 20000,
     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded'
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Referer': 'https://howlongtobeat.com/'
     },
     transformResponse: parseGameResults
   }).then(res => res.data)
